@@ -59,10 +59,20 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     //     need to implement this  has city, delete city, and count cities
+    /**
+     * this checks if the city is in the list
+     city * @param city
+     */
     public boolean hasCity(City city) {
         return cities.contains(city);
     }
-    public void deleteCity(City city){ }
+    /**
+     * this deletes the city from the list
+     city * @param city
+     */
+    public void deleteCity(City city){
+        cities.remove(city);
+    }
 
     public void countCity(City city){ }
 
