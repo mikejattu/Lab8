@@ -73,7 +73,17 @@ public class CustomList extends ArrayAdapter<City> {
     public void deleteCity(City city){
         cities.remove(city);
     }
-
-    public int countCity(City city){ return -1;}
-
+    /**
+     * this counts the number of instance city in the list
+     city * @param city
+     */
+    public int countCity(City city) {
+        int count = 0;
+        for (City c : cities) {
+            if (c == city) {
+                count++;
+            }
+        }
+        return count;
+    }
 }

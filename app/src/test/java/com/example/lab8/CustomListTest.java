@@ -48,7 +48,7 @@ public class CustomListTest {
         assertTrue(list.hasCity(city));
     }
     /**
-     * add city to the city to the city list
+     * add city to the city list
      * check if the city is in city list using hasCity()
      * delete that city
      * check if the city is in city list using hasCity()
@@ -63,10 +63,8 @@ public class CustomListTest {
        assertFalse(list.hasCity(city));
     }
     /**
-     * add city to the city to the city list
-     * check if the city is in city list using hasCity()
-     * delete that city
-     * check if the city is in city list using hasCity()
+     * add city1 twice to the city list and city2 once
+     * check if the count of city1 is 2 using countCity
      */
     @Test
     public void countCityTest(){
@@ -77,6 +75,7 @@ public class CustomListTest {
         list.addCity(city1);
         list.addCity(city2);
         assertEquals(list.countCity(city1),2);
+        assertEquals(list.countCity(city2),1);
     }
 
 
