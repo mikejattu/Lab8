@@ -62,4 +62,22 @@ public class CustomListTest {
        list.deleteCity(city);
        assertFalse(list.hasCity(city));
     }
+    /**
+     * add city to the city to the city list
+     * check if the city is in city list using hasCity()
+     * delete that city
+     * check if the city is in city list using hasCity()
+     */
+    @Test
+    public void countCityTest(){
+        list = MockCityList();
+        City city1 = new City("Estevan", "SK");
+        City city2 = new City("Edmonton", "AB");
+        list.addCity(city1);
+        list.addCity(city1);
+        list.addCity(city2);
+        assertEquals(list.countCity(city1),2);
+    }
+
+
 }
